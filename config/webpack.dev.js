@@ -22,7 +22,14 @@ module.exports = merge(common, {
 			{
 				test: /\.(js|jsx)$/,
 				loader: 'babel-loader'
+      },
+      
+      {{#if useTypeScript}}
+			{
+				test: /\.(ts|tsx)$/,
+				loader: 'ts-loader'
 			},
+			{{/if}}
 		]
 	},
 
