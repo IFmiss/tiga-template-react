@@ -1,6 +1,3 @@
-{{#equal useStore none}}
-src/store/
-{{/equal}}
 {{#unless useTypeScript}}
 tsconfig.json
 {{/unless}}
