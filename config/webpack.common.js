@@ -13,7 +13,7 @@ module.exports = {
       template: 'index.html',
 			inject: true,
 			title: "{{name}}",
-			// favicon: 'src/assets/favicon/favicon.ico',
+			favicon: 'src/assets/favicon.ico',
 			minify: {
 				removeComments: true
 			}
