@@ -43,7 +43,7 @@ module.exports = {
           },
         ]
       },
-      {{#equal useStyle less}}
+      {{#equal useStyle 'less'}}
       {
 				test: /\.less$/,
 				use: [
@@ -59,7 +59,7 @@ module.exports = {
 				],
       },
       {{/equal}}
-      {{#equal useStyle scss}}
+      {{#equal useStyle 'scss'}}
       {
 				test: /\.scss$/,
 				use: [
