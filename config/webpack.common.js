@@ -20,7 +20,11 @@ module.exports = {
 			minify: {
 				removeComments: true
 			}
-    })
+    }),
+    new MiniCssExtractPlugin ({
+			filename: "css/[name]-[hash].css",
+  		chunkFilename: "css/[name]-[hash].css"
+		}),
   ],
 
   module: {
