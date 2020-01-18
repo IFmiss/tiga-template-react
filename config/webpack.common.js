@@ -43,6 +43,38 @@ module.exports = {
           },
         ]
       },
+      {{#equal useStyle less}}
+      {
+				test: /\.less$/,
+				use: [
+					devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+					"css-loader",
+					"less-loader",
+					{
+						loader: 'style-resources-loader',
+						options: {
+							patterns: path.resolve(__dirname, './src/style/val.less')
+						}
+					}
+				],
+      },
+      {{/equal}}
+      {{#equal useStyle scss}}
+      {
+				test: /\.scss$/,
+				use: [
+					devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+					"css-loader",
+					"scss-loader",
+					{
+						loader: 'style-resources-loader',
+						options: {
+							patterns: path.resolve(__dirname, './src/style/val.scss')
+						}
+					}
+				],
+      },
+      {{/equal}}
       {
 				test: /\.(ttf|eot|woff|woff2)$/,
 				use: [
