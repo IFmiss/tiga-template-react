@@ -1,3 +1,10 @@
 {{#unless useTypeScript}}
 tsconfig.json
 {{/unless}}
+
+{{#equal useStyle 'less'}}
+src/styles/val.scss
+{{/equal}}
+{{#equal useStyle 'scss'}}
+src/styles/val.less
+{{/equal}}

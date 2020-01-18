@@ -1,10 +1,13 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const resolve = (dir) => {
   return path.resolve(__dirname, dir)
 }
+
+const devMode = process.env.NODE_ENV === "development"
 
 module.exports = {
   plugins: [
@@ -25,7 +28,7 @@ module.exports = {
       {
         test: /\.(c)ss$/,
         use: [
-          'style-loader',
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -99,15 +102,15 @@ module.exports = {
 
   resolve: {
 		alias: {
-      '@api': resolve('src/api'),
-      '@assets': resolve('src/assets'),
-      '@components': resolve('src/components'),
-      '@constance': resolve('src/constance'),
-      '@store': resolve('src/store'),
-			'@styles': resolve('src/styles'),
-			'@views': resolve('src/views'),
-			'@utils': resolve('src/utils')
+      '@api': resolve('./../src/api'),
+      '@assets': resolve('./../src/assets'),
+      '@components': resolve('./../src/components'),
+      '@constance': resolve('./../src/constance'),
+      '@store': resolve('./../src/store'),
+			'@styles': resolve('./../src/styles'),
+			'@views': resolve('./../src/views'),
+			'@utils': resolve('./../src/utils')
 		},
-		extensions: ['.ts', '.tsx', '.js']
+		extensions: ['.tsx', '.ts', '.jsx', '.js']
 	},
 }
