@@ -23,5 +23,15 @@
   "include": [
     "src",
     "global.d.ts"
-  ]
+  ],
+  "paths": {
+    "@api": ["src/api"],
+    "@assets": ["src/assets"],
+    "@components": ["src/components"],
+    "@constance": ["src/constance"],
+    "@store": ["src/store"],
+    "@styles": ["src/styles"],
+    "@views": ["src/views"],
+    "@utils": ["src/utils"],
+  }
 }

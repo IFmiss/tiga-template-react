@@ -67,11 +67,14 @@ module.exports = {
 
   resolve: {
 		alias: {
-			'assets': resolve('src/assets'),
-			'style': resolve('src/style'),
-			'components': resolve('src/components'),
-			'pages': resolve('src/pages'),
-			'utils': resolve('src/utils')
+      '@api': resolve('src/api'),
+      '@assets': resolve('src/assets'),
+      '@components': resolve('src/components'),
+      '@constance': resolve('src/constance'),
+      '@store': resolve('src/store'),
+			'@styles': resolve('src/styles'),
+			'@views': resolve('src/views'),
+			'@utils': resolve('src/utils')
 		},
 		extensions: ['.ts', '.tsx', '.js']
 	},
