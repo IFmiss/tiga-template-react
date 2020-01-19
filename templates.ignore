@@ -10,3 +10,9 @@ src/components/Hello/hello.scss
 src/styles/val.less
 src/components/Hello/hello.less
 {{/equal}}
+{{#equal useStyle 'none'}}
+src/styles/val.scss
+src/components/Hello/hello.scss
+src/styles/val.less
+src/components/Hello/hello.less
+{{/equal}}
