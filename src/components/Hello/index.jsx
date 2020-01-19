@@ -10,12 +10,16 @@ import {
 } from '@constance/index'
 
 const Hello = () => {
+  const classString = classNames({
+    [`${PROJECT_NAME}-comp-hello`]: true
+  })
+
   useEffect(() => {
     console.log('this is Hello components')  
   }, [])
 
   return (
-    <div>Hello Tiga</div>
+    <div className={classString}>Hello Tiga</div>
   )
 }
 
