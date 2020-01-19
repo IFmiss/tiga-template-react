@@ -1,3 +1,7 @@
+{{#if useTypeScript}}
+src/**/*.js
+src/**/*.jsx
+{{/if}}
 {{#unless useTypeScript}}
 tsconfig.json
 src/**/*.ts
