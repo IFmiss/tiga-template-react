@@ -17,6 +17,12 @@
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
+    {{#if useTypeScript}}
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "@16.9.4",
+    "@types/react-loadable": "^5.5.3",
+    {{/if}}
     "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",

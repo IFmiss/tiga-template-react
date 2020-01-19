@@ -9,7 +9,12 @@ const resolve = function (dir) {
 module.exports = merge(common, {
   mode: 'development',
   entry: {
-    app: './src/index.jsx'
+		{{#if useTypeScript}}
+		app: './src/index.tsx'
+		{{/if}}
+		{{#unless useTypeScript}}
+		app: './src/index.jsx'
+		{{/unless}}
   },
   output: {
     path: resolve('dist'),

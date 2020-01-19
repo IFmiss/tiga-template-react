@@ -9,7 +9,7 @@ import {
   PROJECT_NAME
 } from '@constance/index'
 
-const IHelloProps = {}
+interface IHelloProps {}
 
 const Hello: React.FC<IHelloProps> = () => {
   const classString = classNames({
