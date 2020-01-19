@@ -3,12 +3,12 @@ tsconfig.json
 {{/unless}}
 
 {{#equal useStyle 'less'}}
-*.scss
+src/**/*.scss
 {{/equal}}
 {{#equal useStyle 'scss'}}
-*.less
+src/**/*.less
 {{/equal}}
 {{#equal useStyle 'none'}}
-*.scss
-*.less
+src/**/*.scss
+src/**/*.less
 {{/equal}}
