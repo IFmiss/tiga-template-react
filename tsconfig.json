@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": [
       "dom",
@@ -7,6 +8,7 @@
       "esnext"
     ],
     "allowJs": true,
+    "noImplicitAny": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -17,21 +19,21 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve"
+    "noEmit": false,
+    "jsx": "react",
+    "paths": {
+      "@api/*": ["src/api/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@constance/*": ["src/constance/*"],
+      "@store/*": ["src/store/*"],
+      "@styles/*": ["src/styles/*"],
+      "@views/*": ["src/views/*"],
+      "@utils/*": ["src/utils/*"],
+    }
   },
   "include": [
-    "src",
+    "src/**/*",
     "global.d.ts"
-  ],
-  "paths": {
-    "@api": ["src/api"],
-    "@assets": ["src/assets"],
-    "@components": ["src/components"],
-    "@constance": ["src/constance"],
-    "@store": ["src/store"],
-    "@styles": ["src/styles"],
-    "@views": ["src/views"],
-    "@utils": ["src/utils"],
-  }
+  ]
 }
