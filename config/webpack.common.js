@@ -59,7 +59,7 @@ module.exports = {
 					{
 						loader: 'style-resources-loader',
 						options: {
-							patterns: path.resolve(__dirname, './src/style/val.less')
+							patterns: path.resolve(__dirname, './../src/styles/val.less')
 						}
 					}
 				],
@@ -67,15 +67,15 @@ module.exports = {
       {{/equal}}
       {{#equal useStyle 'scss'}}
       {
-				test: /\.scss$/,
+				test: /\.(sc|sa)ss$/,
 				use: [
 					devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
 					"css-loader",
-					"scss-loader",
+					"sass-loader",
 					{
 						loader: 'style-resources-loader',
 						options: {
-							patterns: path.resolve(__dirname, './src/style/val.scss')
+							patterns: path.resolve(__dirname, './../src/styles/val.scss')
 						}
 					}
 				],

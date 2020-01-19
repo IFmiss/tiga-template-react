@@ -1,5 +1,7 @@
 {{#unless useTypeScript}}
 tsconfig.json
+src/**/*.ts
+src/**/*.tsx
 {{/unless}}
 
 {{#equal useStyle 'less'}}
