@@ -4,7 +4,9 @@ tsconfig.json
 
 {{#equal useStyle 'less'}}
 src/styles/val.scss
+src/components/Hello/hello.scss
 {{/equal}}
 {{#equal useStyle 'scss'}}
 src/styles/val.less
+src/components/Hello/hello.less
 {{/equal}}
