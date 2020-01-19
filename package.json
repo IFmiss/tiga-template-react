@@ -23,8 +23,8 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     {{#equal useStyle 'less'}}
-      "less": "^3.10.3",
-      "less-loader": "^5.0.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     {{/equal}}
     "postcss-loader": "^3.0.0",
     "style-loader": "^1.1.2",
