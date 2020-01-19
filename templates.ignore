@@ -3,16 +3,12 @@ tsconfig.json
 {{/unless}}
 
 {{#equal useStyle 'less'}}
-src/styles/val.scss
-src/components/Hello/hello.scss
+*.scss
 {{/equal}}
 {{#equal useStyle 'scss'}}
-src/styles/val.less
-src/components/Hello/hello.less
+*.less
 {{/equal}}
 {{#equal useStyle 'none'}}
-src/styles/val.scss
-src/components/Hello/hello.scss
-src/styles/val.less
-src/components/Hello/hello.less
+*.scss
+*.less
 {{/equal}}
