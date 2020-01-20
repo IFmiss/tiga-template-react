@@ -112,7 +112,8 @@ module.exports = {
       '@store': resolve('./../src/store'),
 			'@styles': resolve('./../src/styles'),
 			'@views': resolve('./../src/views'),
-			'@utils': resolve('./../src/utils')
+			'@utils': resolve('./../src/utils'),
+			'@router': resolve('./../src/router')
 		},
 		extensions: ['.tsx', '.ts', '.jsx', '.js']
 	},

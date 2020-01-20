@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import '@styles/reset.css'
 
-import Hello from '@components/Hello'
+import App from './app'
 
 ReactDOM.render(
-  <Hello/>,
+  <App/>,
   document.getElementById('root')
 )
