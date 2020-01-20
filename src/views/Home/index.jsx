@@ -10,7 +10,9 @@ import {
 import HomeAction from '@store/actions'
 {{/equal}}
 
-const Home = () => {
+import Hello from '@components/Hello'
+
+const Home = (props) => {
   return (
     <>
       <div>this is home</div>

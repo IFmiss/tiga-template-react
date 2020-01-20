@@ -10,9 +10,11 @@ import {
 import HomeAction from '@store/actions'
 {{/equal}}
 
+import Hello from '@components/Hello'
+
 interface IHomeProps {}
 
-const Home: React.FC<IHomeProps> = () => {
+const Home: React.FC<IHomeProps> = (props) => {
   return (
     <>
       <div>this is home</div>
