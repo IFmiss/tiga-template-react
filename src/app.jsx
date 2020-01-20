@@ -14,7 +14,10 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <Route path="/home" component={Home}/>
+      <Switch>
+        <Route path="/home" component={Home}/>
+        <Redirect from="/*" to="/home" strict exact/>
+      </Switch>
     </BrowserRouter>
   )
 }
