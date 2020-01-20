@@ -3,7 +3,13 @@ import React, {
 } from 'react'
 
 import classNames from 'classnames'
+
+{{#equal useStyle 'less'}}
 import './hello.less'
+{{/equal}}
+{{#equal useStyle 'sass'}}
+import './hello.scss'
+{{/equal}}
 
 import {
   PROJECT_NAME
