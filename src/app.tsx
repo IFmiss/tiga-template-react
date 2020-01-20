@@ -1,4 +1,6 @@
 import React from 'react'
+
+{{#if useRouter}}
 import {
   BrowserRouter,
   Route,
@@ -10,7 +12,6 @@ import {
   Home
 } from '@router/index'
 
-
 const App = () => {
   return (
     <BrowserRouter>
@@ -18,5 +19,15 @@ const App = () => {
     </BrowserRouter>
   )
 }
+{{/if}}
+
+{{#unless useRouter}}
+import Hello from '@components/Hello'
+const App = () => {
+  return (
+    <Hello/>
+  )
+}
+{{/unless}}
 
 export default App

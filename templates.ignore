@@ -8,6 +8,10 @@ src/**/*.ts
 src/**/*.tsx
 {{/unless}}
 
+{{#unless useRouter}}
+src/router/*
+{{/unless}}
+
 {{#equal useStyle 'less'}}
 src/**/*.scss
 {{/equal}}
