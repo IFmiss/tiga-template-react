@@ -6,10 +6,12 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom'
+{{/if}}
 import {
   Home
 } from '@router/index'
 
+{{#if useRouter}}
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,11 +24,9 @@ const App = () => {
 }
 {{/if}}
 {{#unless useRouter}}
-import Hello from '@components/Hello'
-
 const App = () => {
   return (
-    <Hello/>
+    <Home/>
   )
 }
 {{/unless}}
