@@ -28,4 +28,7 @@ const Hello = () => {
   )
 }
 
-export default Hello
+export default connect(
+  ({home}) => home,
+  HomeAction
+)(Home)

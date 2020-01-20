@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom'
 import '@styles/reset.css'
 
 import { Provider } from 'react-redux';
-import store from 'src/controller/store/index';
+import store from '@store/index';
 
 {{#if useRouter}}
 import App from './app'
 {{/if}}
 {{#unless useRouter}}
-import App from '@components/Hello'
+import App from '@views/home'
 {{/unless}}
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App/>
   </Provider>,
   document.getElementById('root')
