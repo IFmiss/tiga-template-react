@@ -12,6 +12,16 @@ src/**/*.tsx
 src/router/*
 {{/unless}}
 
+{{#equal useStore 'redux'}}
+src/store/mobx/
+{{/equal}}
+{{#equal useStore 'mobx'}}
+src/store/redux/
+{{/equal}}
+{{#equal useStore 'none'}}
+src/store/
+{{/equal}}
+
 {{#equal useStyle 'less'}}
 src/**/*.scss
 {{/equal}}
