@@ -52,6 +52,6 @@ export default connect(
   HomeAction
 )(Home)
 {{/equal}}
-{{#equal useStore 'none'}}
+{{#equal useStore 'redux'}}
 export default Home
 {{/equal}}

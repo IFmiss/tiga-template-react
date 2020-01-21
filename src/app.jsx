@@ -24,6 +24,8 @@ const App = () => {
 }
 {{/if}}
 {{#unless useRouter}}
+import Home from '@views/Home'
+
 const App = () => {
   return (
     <Home/>
