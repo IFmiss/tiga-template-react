@@ -38,7 +38,7 @@ const Home = observer((props) => {
     <>
       <div>this is home</div>
       <Hello/>
-      <span>{() => homeStore.count()}</span>
+      <span>{ homeStore.count }</span>
       <div onClick={() => homeStore.addCount()}> + 1</div>
       <div onClick={() => homeStore.reduceCount()}> - 1</div>
     </>
