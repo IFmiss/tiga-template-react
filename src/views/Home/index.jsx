@@ -18,6 +18,7 @@ import {
 {{/equal}}
 import Hello from '@components/Hello'
 
+{{#unEqual useStore 'mobx'}}
 const Home = (props) => {
   return (
     <>
@@ -29,6 +30,21 @@ const Home = (props) => {
     </>
   )
 }
+{{/unEqual}}
+{{#equal useStore 'mobx'}}
+const Home = observer((props) => {
+  const { homeStore } = useStore()
+  return (
+    <>
+      <div>this is home</div>
+      <Hello/>
+      <span>{() => homeStore.count()}</span>
+      <div onClick={() => homeStore.addCount()}> + 1</div>
+      <div onClick={() => homeStore.reduceCount()}> - 1</div>
+    </>
+  )
+})
+{{/equal}}
 
 {{#equal useStore 'redux'}}
 export default connect(

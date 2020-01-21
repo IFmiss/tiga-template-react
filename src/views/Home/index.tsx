@@ -37,14 +37,14 @@ const Home: React.FC<IHomeProps> = (props) => {
 {{/unEqual}}
 {{#equal useStore 'mobx'}}
 const Home: React.FC<IHomeProps> = observer((props) => {
-  const { homeStore: { count, addCount, reduceCount } } = useStore()
+  const { homeStore } = useStore()
   return (
     <>
       <div>this is home</div>
       <Hello/>
-      <span>{count}</span>
-      <div onClick={addCount}> + 1</div>
-      <div onClick={reduceCount}> - 1</div>
+      <span>{() => homeStore.count()}</span>
+      <div onClick={() => homeStore.addCount()}> + 1</div>
+      <div onClick={() => homeStore.reduceCount()}> - 1</div>
     </>
   )
 })
