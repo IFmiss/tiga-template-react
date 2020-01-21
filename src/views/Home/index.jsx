@@ -6,10 +6,16 @@ import React, {
 import {
   connect
 } from 'react-redux'
-
 import HomeAction from '@store/actions'
 {{/equal}}
-
+{{#equal useStore 'mobx'}}
+import {
+  observer
+} from 'mobx-react'
+import {
+  useStore
+} from '@store/context'
+{{/equal}}
 import Hello from '@components/Hello'
 
 const Home = (props) => {

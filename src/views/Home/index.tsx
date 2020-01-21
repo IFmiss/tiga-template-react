@@ -13,6 +13,9 @@ import { useStore } from '@store/mobx/context'
 import {
   observer
 } from 'mobx-react'
+import {
+  useStore
+} from '@store/context'
 {{/equal}}
 
 import Hello from '@components/Hello'

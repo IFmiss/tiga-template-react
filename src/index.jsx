@@ -12,12 +12,7 @@ import {
   context
 } from '@store/context'
 {{/equal}}
-{{#if useRouter}}
 import App from './app'
-{{/if}}
-{{#unless useRouter}}
-import App from '@views/home'
-{{/unless}}
 
 {{#equal useStore 'redux'}}
 ReactDOM.render(
