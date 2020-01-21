@@ -6,11 +6,10 @@ import {
 
 export default class HomeModule {
   @observable
-  count: number = 0
+  count = 0
 
   @action
   addCount () {
-    console.log(this)
     this.count++
   }
 
