@@ -8,6 +8,8 @@ module.exports = {
     ["@babel/preset-react"]
   ],
   plugins: [
+    {{#unless useTypeScript}}
+    {{#equal useStore 'mobx'}}
     [
       "@babel/plugin-proposal-decorators", {
         legacy: true 
@@ -18,6 +20,8 @@ module.exports = {
         loose : true
       }
     ],
+    {{/equal}}
+    {{/unless}}
     ["@babel/plugin-syntax-dynamic-import"],
   ]
 }
