@@ -1,8 +1,9 @@
 import {
-  bindActionCreators
+  bindActionCreators,
+  Dispatch
 } from 'redux'
 import * as HomeAction from './home'
 
-export default dispatch => bindActionCreators({
+export default (dispatch: Dispatch) => bindActionCreators({
   ...HomeAction
 }, dispatch)
