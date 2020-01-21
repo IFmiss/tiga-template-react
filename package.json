@@ -38,6 +38,10 @@
     "node-sass": "^4.13.1",
     {{/equal}}
     "mini-css-extract-plugin": "^0.9.0",
+    {{#equal useStore 'mobx'}}
+    "mobx": "^5.15.2",
+    "mobx-react": "^6.1.5",
+    {{/equal}}
     {{#equal useStyle 'less'}}
     "less": "^3.10.3",
     "less-loader": "^5.0.0",

@@ -6,6 +6,12 @@ import '@styles/reset.css'
 import { Provider } from 'react-redux';
 import store from '@store/index';
 {{/equal}}
+{{#equal useStore 'mobx'}}
+import store from '@store/index'
+import {
+  context
+} from '@store/context'
+{{/equal}}
 {{#if useRouter}}
 import App from './app'
 {{/if}}
