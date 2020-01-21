@@ -21,7 +21,7 @@ src/store/redux/**/*
 src/store/mobx/**/*
 {{/equal}}
 {{#equal useStore 'none'}}
-src/store/*
+src/store/**/*
 {{/equal}}
 
 {{#equal useStyle 'less'}}
