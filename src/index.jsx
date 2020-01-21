@@ -13,9 +13,17 @@ import App from './app'
 import App from '@views/home'
 {{/unless}}
 
+{{#equal useStore 'redux'}}
 ReactDOM.render(
   <Provider store={store}>
     <App/>
   </Provider>,
   document.getElementById('root')
 )
+{{/equal}}
+{{#equal useStore 'none'}}
+ReactDOM.render(
+  <App/>,
+  document.getElementById('root')
+)
+{{/equal}}
