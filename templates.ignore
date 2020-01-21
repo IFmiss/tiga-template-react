@@ -13,10 +13,12 @@ src/router/*
 {{/unless}}
 
 {{#equal useStore 'redux'}}
+src/store/redux/
 src/store/mobx/
 {{/equal}}
 {{#equal useStore 'mobx'}}
 src/store/redux/
+src/store/mobx/
 {{/equal}}
 {{#equal useStore 'none'}}
 src/store/
