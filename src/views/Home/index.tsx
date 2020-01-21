@@ -6,14 +6,20 @@ import React, {
 import {
   connect
 } from 'react-redux'
-
 import HomeAction from '@store/actions'
+import { useStore } from '@store/mobx/context'
+{{/equal}}
+{{#equal useStore 'mobx'}}
+import {
+  observer
+} from 'mobx-react'
 {{/equal}}
 
 import Hello from '@components/Hello'
 
 interface IHomeProps {}
 
+{{#unEqual useStore 'mobx'}}
 const Home: React.FC<IHomeProps> = (props) => {
   return (
     <>
@@ -25,6 +31,21 @@ const Home: React.FC<IHomeProps> = (props) => {
     </>
   )
 }
+{{/unEqual}}
+{{#equal useStore 'mobx'}}
+const Home: React.FC<IHomeProps> = observer((props) => {
+  const { homeStore: { count, addCount, reduceCount } } = useStore()
+  return (
+    <>
+      <div>this is home</div>
+      <Hello/>
+      <span>{count}</span>
+      <div onClick={addCount}> + 1</div>
+      <div onClick={reduceCount}> - 1</div>
+    </>
+  )
+})
+{{/equal}}
 
 {{#equal useStore 'redux'}}
 export default connect(
@@ -32,6 +53,6 @@ export default connect(
   HomeAction
 )(Home)
 {{/equal}}
-{{#equal useStore 'none'}}
+{{#unEqual useStore 'redux'}}
 export default Home
-{{/equal}}
+{{/unEqual}}

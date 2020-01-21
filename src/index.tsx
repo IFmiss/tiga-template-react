@@ -19,6 +19,14 @@ import App from './app'
 import App from '@views/home'
 {{/unless}}
 
+{{#equal useStore 'mobx'}}
+ReactDOM.render(
+  <context.Provider value={store}>
+    <App/>
+  </context.Provider>,
+  document.getElementById('root')
+)
+{{/equal}}
 {{#equal useStore 'redux'}}
 ReactDOM.render(
   <Provider store={store}>
