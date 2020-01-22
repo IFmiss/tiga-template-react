@@ -22,7 +22,17 @@ import Hello from '@components/Hello'
 
 interface IHomeProps {}
 
-{{#unEqual useStore 'mobx'}}
+{{#equal useStore 'none'}}
+const Home: React.FC<IHomeProps> = (props) => {
+  return (
+    <>
+      <div>this is home</div>
+      <Hello/>
+    </>
+  )
+}
+{{/equal}}
+{{#equal useStore 'redux'}}
 const Home: React.FC<IHomeProps> = (props) => {
   return (
     <>
@@ -34,7 +44,7 @@ const Home: React.FC<IHomeProps> = (props) => {
     </>
   )
 }
-{{/unEqual}}
+{{/equal}}
 {{#equal useStore 'mobx'}}
 const Home: React.FC<IHomeProps> = observer((props) => {
   const { homeStore } = useStore()

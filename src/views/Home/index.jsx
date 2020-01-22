@@ -18,7 +18,17 @@ import {
 {{/equal}}
 import Hello from '@components/Hello'
 
-{{#unEqual useStore 'mobx'}}
+{{#equal useStore 'none'}}
+const Home: React.FC<IHomeProps> = (props) => {
+  return (
+    <>
+      <div>this is home</div>
+      <Hello/>
+    </>
+  )
+}
+{{/equal}}
+{{#equal useStore 'redux'}}
 const Home = (props) => {
   return (
     <>
@@ -30,7 +40,7 @@ const Home = (props) => {
     </>
   )
 }
-{{/unEqual}}
+{{/equal}}
 {{#equal useStore 'mobx'}}
 const Home = observer((props) => {
   const { homeStore } = useStore()
