@@ -9,16 +9,16 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 // 打包清除dist目录
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
   entry: {
     {{#if useTypeScript}}
-    app: './../src/index.tsx',
+    app: './src/index.tsx',
     {{/if}}
     {{#unless useTypeScript}}
-    app: './../src/index.jsx',
+    app: './src/index.jsx',
     {{/unless}}
   },
   externals: {
@@ -49,8 +49,8 @@ module.exports = merge(common, {
   },
   plugins: [
     // 清除
-    new CleanWebpackPlugin(['dist'], {
-			verbose: false
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: path.resolve(__dirname, 'dist')
     }),
     
     // css 压缩
