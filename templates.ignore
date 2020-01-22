@@ -24,6 +24,10 @@ src/store/mobx/**/*
 src/store/**/*
 {{/equal}}
 
+{{#unless useTest}}
+/test/**/*
+{{/if}}
+
 {{#equal useStyle 'less'}}
 src/**/*.scss
 {{/equal}}

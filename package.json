@@ -8,7 +8,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config ./config/webpack.dev.js --progress",
-    "build": "webpack --progress --config ./config/webpack.prod.js"
+    "build": "webpack --progress --config ./config/webpack.prod.js",
+    {{#if useTest}}
+    "mocha": "mocha"
+    {{/if}}
   },
   "dependencies": {
     "react": "^16.12.0",
