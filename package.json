@@ -40,6 +40,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "classnames": "^2.2.6",
+    "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
     {{#equal useStyle 'scss'}}
     "node-sass": "^4.13.1",
@@ -53,6 +54,7 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     {{/equal}}
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     {{#if useRouter}}
     "react-loadable": "^5.5.0",
@@ -70,12 +72,15 @@
     {{#unEqual useStyle 'none'}}
     "style-resources-loader": "^1.3.3",
     {{/unEqual}}
+    "terser-webpack-plugin": "^2.3.2",
     {{#if useTypeScript}}
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5",
     {{/if}}
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^3.0.0",
     "webpack": "^4.41.5",
+    "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2"
