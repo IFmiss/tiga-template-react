@@ -29,6 +29,9 @@
     {{/equal}}
     {{/unless}}
     {{#if useTypeScript}}
+    {{#if useTest}}
+    "@babel/register": "^7.8.3",
+    {{/if}}
     "@types/classnames": "^2.2.9",
     "@types/react": "^16.9.17",
     "@types/react-dom": "@16.9.4",
