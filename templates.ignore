@@ -28,7 +28,7 @@ src/store/**/*
 /test/**/*
 .mocharc.yaml
 .mocharc.json
-{{/if}}
+{{/unless}}
 
 {{#equal useStyle 'less'}}
 src/**/*.scss
