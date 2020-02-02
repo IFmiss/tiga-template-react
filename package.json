@@ -34,6 +34,7 @@
     {{#if useTest}}
     "@types/chai": "^4.2.8",
     "@types/mocha": "^7.0.1",
+    "ts-node": "^8.6.2",
     {{/if}}
     "@types/classnames": "^2.2.9",
     "@types/react": "^16.9.17",
