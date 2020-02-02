@@ -1,11 +1,15 @@
 {{#if useTypeScript}}
 src/**/*.js
 src/**/*.jsx
+test/**/*.js
+test/**/*.jsx
 {{/if}}
 {{#unless useTypeScript}}
 tsconfig.json
 src/**/*.ts
 src/**/*.tsx
+test/**/*.ts
+test/**/*.tsx
 {{/unless}}
 
 {{#unless useRouter}}
@@ -26,8 +30,12 @@ src/store/**/*
 
 {{#unless useTest}}
 /test/**/*
+{{#if useTypeScript}}
 .mocharc.yaml
+{{/if}}
+{{#unless useTypeScript}}
 .mocharc.json
+{{/unless}}
 {{/unless}}
 
 {{#equal useStyle 'less'}}

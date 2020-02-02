@@ -7,7 +7,6 @@ import {
   connect
 } from 'react-redux'
 import HomeAction from '@store/actions'
-import { useStore } from '@store/mobx/context'
 {{/equal}}
 {{#equal useStore 'mobx'}}
 import {
@@ -19,8 +18,18 @@ import {
 {{/equal}}
 
 import Hello from '@components/Hello'
+{{#equal useStyle 'less'}}
+import './home.less'
+{{/equal}}
+{{#equal useStyle 'scss'}}
+import './home.scss'
+{{/equal}}
 
-interface IHomeProps {}
+interface IHomeProps {
+  count: number
+  addCount: () => void
+  reduceCount: () => void
+}
 
 {{#equal useStore 'none'}}
 const Home: React.FC<IHomeProps> = (props) => {

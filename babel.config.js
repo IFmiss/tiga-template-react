@@ -1,9 +1,14 @@
 module.exports = {
   "presets": [
     [
+      {{#unless useTest}}
       "@babel/preset-env", {
         modules: false
       }
+      {{#unless}}
+      {{#if useTest}}
+      "@babel/preset-env"
+      {{/if}}
     ],
     ["@babel/preset-react"]
   ],

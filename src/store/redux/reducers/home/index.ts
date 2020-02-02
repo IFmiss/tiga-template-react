@@ -4,7 +4,11 @@ import {
 
 import * as types from '@store/mutation-types'
 
-export function count (state: number = 0, action): number {
+import {
+  IActionProps
+} from '@store/types'
+
+export function count (state: number = 0, action: IActionProps): number {
   switch (action.type) {
     case types.ADD_COUNT:
       return state + action.data

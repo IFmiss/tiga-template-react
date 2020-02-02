@@ -17,9 +17,15 @@ import {
 } from '@store/context'
 {{/equal}}
 import Hello from '@components/Hello'
+{{#equal useStyle 'less'}}
+import './home.less'
+{{/equal}}
+{{#equal useStyle 'scss'}}
+import './home.scss'
+{{/equal}}
 
 {{#equal useStore 'none'}}
-const Home: React.FC<IHomeProps> = (props) => {
+const Home = (props) => {
   return (
     <>
       <div>this is home</div>
