@@ -40,7 +40,7 @@ src/store/**/*
 {{#unless useTypeScript}}
 .mocharc.json
 {{/unless}}
-{{/}}
+{{/if}}
 
 {{#equal useStyle 'less'}}
 src/**/*.scss
