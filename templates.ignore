@@ -28,11 +28,6 @@ src/store/mobx/**/*
 src/store/**/*
 {{/equal}}
 
-{{#unless useTest}}
-/test/**/*
-.mocharc.yaml
-.mocharc.json
-{{/unless}}
 {{#if useTest}}
 {{#if useTypeScript}}
 .mocharc.yaml
@@ -41,6 +36,12 @@ src/store/**/*
 .mocharc.json
 {{/unless}}
 {{/if}}
+
+{{#unless useTest}}
+/test/**/*
+.mocharc.yaml
+.mocharc.json
+{{/unless}}
 
 {{#equal useStyle 'less'}}
 src/**/*.scss
