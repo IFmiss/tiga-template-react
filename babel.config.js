@@ -1,13 +1,20 @@
 module.exports = {
-  "presets": [
+  presets: [
     [
       {{#unless useTest}}
       "@babel/preset-env", {
         modules: false
       }
-      {{#unless}}
+      {{/unless}}
       {{#if useTest}}
+      {{#if useTypeScript}}
+      "@babel/preset-env", {
+        modules: false
+      }
+      {{/if}}
+      {{#unless useTypeScript}}
       "@babel/preset-env"
+      {{/unless}}
       {{/if}}
     ],
     ["@babel/preset-react"]
