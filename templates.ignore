@@ -31,10 +31,10 @@ src/store/**/*
 {{#unless useTest}}
 /test/**/*
 {{#if useTypeScript}}
-.mocharc.json
+.mocharc.yaml
 {{/if}}
 {{#unless useTypeScript}}
-.mocharc.yaml
+.mocharc.json
 {{/unless}}
 {{/unless}}
 
