@@ -34,23 +34,23 @@ interface IHomeProps {
 {{#equal useStore 'none'}}
 const Home: React.FC<IHomeProps> = (props) => {
   return (
-    <>
+    <div className="home">
       <div>this is home</div>
       <Hello/>
-    </>
+    </div>
   )
 }
 {{/equal}}
 {{#equal useStore 'redux'}}
 const Home: React.FC<IHomeProps> = (props) => {
   return (
-    <>
+    <div className="home">
       <div>this is home</div>
       <Hello/>
       <span>{props.count}</span>
       <div onClick={props.addCount}> + 1</div>
       <div onClick={props.reduceCount}> - 1</div>
-    </>
+    </div>
   )
 }
 {{/equal}}
@@ -58,13 +58,13 @@ const Home: React.FC<IHomeProps> = (props) => {
 const Home: React.FC<IHomeProps> = observer((props) => {
   const { homeStore } = useStore()
   return (
-    <>
+    <div className="home">
       <div>this is home</div>
       <Hello/>
       <span>{ homeStore.count }</span>
       <div onClick={() => homeStore.addCount()}> + 1</div>
       <div onClick={() => homeStore.reduceCount()}> - 1</div>
-    </>
+    </div>
   )
 })
 {{/equal}}
