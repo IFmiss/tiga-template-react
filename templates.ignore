@@ -30,13 +30,17 @@ src/store/**/*
 
 {{#unless useTest}}
 /test/**/*
+.mocharc.yaml
+.mocharc.json
+{{/unless}}
+{{#if useTest}}
 {{#if useTypeScript}}
 .mocharc.yaml
 {{/if}}
 {{#unless useTypeScript}}
 .mocharc.json
 {{/unless}}
-{{/unless}}
+{{/}}
 
 {{#equal useStyle 'less'}}
 src/**/*.scss
