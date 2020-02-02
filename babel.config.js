@@ -27,6 +27,6 @@ module.exports = {
     ],
     {{/equal}}
     {{/unless}}
-    ["@babel/plugin-syntax-dynamic-import"],
+    ["@babel/plugin-syntax-dynamic-import"]
   ]
 }
