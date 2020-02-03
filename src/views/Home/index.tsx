@@ -71,7 +71,7 @@ const Home: React.FC<IHomeProps> = observer((props) => {
 
 {{#equal useStore 'redux'}}
 export default connect(
-  ({home}) => home,
+  (state: any) => state.home,
   HomeAction
 )(Home)
 {{/equal}}
