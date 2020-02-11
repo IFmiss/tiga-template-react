@@ -99,6 +99,6 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2",
-    "webpack-prompt-plugin": "^1.0.9"
+    "webpack-prompt-plugin": "^1.1.1"
   }
 }

@@ -31,7 +31,10 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(js|jsx)$/,
-				loader: 'babel-loader'
+				loader: 'babel-loader',
+				query: {
+					compact: false
+				}
       },
       {{#if useTypeScript}}
 			{
