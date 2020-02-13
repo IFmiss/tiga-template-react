@@ -57,4 +57,4 @@ src/**/*.less
 {{#unless useGitHook}}
 commitlint.config.js
 {{/unless}}
-git-tpl/**/*
+git/**/*
