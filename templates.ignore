@@ -53,3 +53,7 @@ src/**/*.less
 src/**/*.scss
 src/**/*.less
 {{/equal}}
+
+{{#unless useGitHook}}
+commitlint.config.js
+{{/unless}}
