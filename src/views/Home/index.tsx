@@ -25,13 +25,10 @@ import './home.less'
 import './home.scss'
 {{/equal}}
 
-interface IHomeProps {
-  count: number
-  addCount: () => void
-  reduceCount: () => void
-}
 
 {{#equal useStore 'none'}}
+interface IHomeProps {}
+
 const Home: React.FC<IHomeProps> = (props) => {
   return (
     <div className="home">
@@ -42,6 +39,12 @@ const Home: React.FC<IHomeProps> = (props) => {
 }
 {{/equal}}
 {{#equal useStore 'redux'}}
+
+interface IHomeProps {
+  count: number
+  addCount: () => void
+  reduceCount: () => void
+}
 const Home: React.FC<IHomeProps> = (props) => {
   return (
     <div className="home">
@@ -55,6 +58,12 @@ const Home: React.FC<IHomeProps> = (props) => {
 }
 {{/equal}}
 {{#equal useStore 'mobx'}}
+
+interface IHomeProps {
+  count: number
+  addCount: () => void
+  reduceCount: () => void
+}
 const Home: React.FC<IHomeProps> = observer((props) => {
   const { homeStore } = useStore()
   return (
