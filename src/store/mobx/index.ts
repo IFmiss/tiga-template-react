@@ -1,4 +1,4 @@
-import HomeModule from './modules/Home'
+import HomeModule from './modules/home'
 
 const store = {
   homeStore: new HomeModule()

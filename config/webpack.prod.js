@@ -32,7 +32,7 @@ module.exports = merge(common, {
     {{/equal}}
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './../dist'),
     publicPath: './',
     filename: 'js/[name]-[hash].js',
     libraryTarget: 'umd'
