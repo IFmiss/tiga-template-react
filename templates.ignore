@@ -38,7 +38,7 @@ src/store/**/*
 {{/if}}
 
 {{#unless useTest}}
-/test/**/*
+test/**/*
 .mocharc.yaml
 .mocharc.json
 {{/unless}}
