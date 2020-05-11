@@ -4,9 +4,7 @@ import {
   BrowserRouter
 } from 'react-router-dom'
 import RoutesProvider from '@router/index'
-{{/if}}
 
-{{#if useRouter}}
 const App = () => {
   return (
     <BrowserRouter>

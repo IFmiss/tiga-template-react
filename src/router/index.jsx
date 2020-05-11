@@ -2,7 +2,7 @@ import React from 'react';
 import rs from './map';
 
 import { Switch, Route, HashRouter as Router, Redirect } from 'react-router-dom';
-import { DEFAULT_TITLE } from '@/constance';
+import { DEFAULT_TITLE } from '@constance/index';
 
 const RenderRouters = (route) => {
   const redirectPath = route.path ? route.path : rs.filter(item => item.name == route.name)[0].path || '/'
