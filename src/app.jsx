@@ -1,24 +1,16 @@
 import React from 'react'
 {{#if useRouter}}
 import {
-  BrowserRouter,
-  Route,
-  Switch,
-  Redirect
+  BrowserRouter
 } from 'react-router-dom'
-import {
-  Home
-} from '@router/index'
+import RoutesProvider from '@router/index'
 {{/if}}
 
 {{#if useRouter}}
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path="/home" component={Home}/>
-        <Redirect from="/*" to="/home" strict exact/>
-      </Switch>
+      <RoutesProvider></RoutesProvider>
     </BrowserRouter>
   )
 }

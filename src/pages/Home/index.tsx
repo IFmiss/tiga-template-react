@@ -43,7 +43,7 @@ interface IHomeProps {
   addCount: () => void
   reduceCount: () => void
 }
-const Home: React.FC<IHomeProps> = (props) => {
+const Home: React.FC<Partial<IHomeProps>> = (props) => {
   return (
     <div className="home">
       <div>this is home</div>
@@ -62,7 +62,7 @@ interface IHomeProps {
   addCount: () => void
   reduceCount: () => void
 }
-const Home: React.FC<IHomeProps> = observer((props) => {
+const Home: React.FC<Partial<IHomeProps>> = observer((props) => {
   const { homeStore } = useStore()
   return (
     <div className="home">
