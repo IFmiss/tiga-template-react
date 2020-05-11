@@ -1,8 +1,9 @@
 import Loadable from 'react-loadable';
+import Loading from '../components/Loading';
 
 const Home = Loadable({
   loader: () => import('@pages/Home'),
-  loading: '加载中...'
+  loading: Loading
 })
 
 const routes = [{
