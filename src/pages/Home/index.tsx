@@ -1,6 +1,4 @@
-import React, {
-  useEffect
-} from 'react'
+import React from 'react'
 
 {{#equal useStore 'redux'}}
 import {
@@ -16,6 +14,7 @@ import {
   useStore
 } from '@store/context'
 {{/equal}}
+
 import Hello from '@components/Hello'
 {{#equal useStyle 'less'}}
 import './home.less'
@@ -24,8 +23,11 @@ import './home.less'
 import './home.scss'
 {{/equal}}
 
+
 {{#equal useStore 'none'}}
-const Home = (props) => {
+interface IHomeProps {}
+
+const Home: React.FC<IHomeProps> = (props) => {
   return (
     <div className="home">
       <div>this is home</div>
@@ -35,7 +37,13 @@ const Home = (props) => {
 }
 {{/equal}}
 {{#equal useStore 'redux'}}
-const Home = (props) => {
+
+interface IHomeProps {
+  count: number
+  addCount: () => void
+  reduceCount: () => void
+}
+const Home: React.FC<IHomeProps> = (props) => {
   return (
     <div className="home">
       <div>this is home</div>
@@ -48,7 +56,13 @@ const Home = (props) => {
 }
 {{/equal}}
 {{#equal useStore 'mobx'}}
-const Home = observer((props) => {
+
+interface IHomeProps {
+  count: number
+  addCount: () => void
+  reduceCount: () => void
+}
+const Home: React.FC<IHomeProps> = observer((props) => {
   const { homeStore } = useStore()
   return (
     <div className="home">
@@ -64,7 +78,7 @@ const Home = observer((props) => {
 
 {{#equal useStore 'redux'}}
 export default connect(
-  ({home}) => home,
+  (state: any) => state.home,
   HomeAction
 )(Home)
 {{/equal}}

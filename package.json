@@ -42,6 +42,7 @@
     "@commitlint/config-conventional": "^8.3.4",
     {{/if}}
     {{#if useTypeScript}}
+    "@babel/preset-typescript": "^7.9.0",
     {{#if useTest}}
     "@types/chai": "^4.2.8",
     "@types/mocha": "^7.0.1",

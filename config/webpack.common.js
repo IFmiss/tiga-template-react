@@ -135,7 +135,7 @@ module.exports = {
       '@constance': resolve('./../src/constance'),
       '@store': resolve('./../src/store'),
 			'@styles': resolve('./../src/styles'),
-			'@views': resolve('./../src/views'),
+			'@pages': resolve('./../src/pages'),
 			'@utils': resolve('./../src/utils'),
 			'@router': resolve('./../src/router')
 		},

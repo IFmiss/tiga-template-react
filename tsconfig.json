@@ -36,7 +36,7 @@
       "@constance/*": ["src/constance/*"],
       "@store/*": ["src/store/*"],
       "@styles/*": ["src/styles/*"],
-      "@views/*": ["src/views/*"],
+      "@pages/*": ["src/pages/*"],
       "@utils/*": ["src/utils/*"],
       "@router/*": ["src/router/*"],
     }

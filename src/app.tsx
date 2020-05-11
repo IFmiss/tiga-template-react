@@ -22,7 +22,7 @@ const App = () => {
 }
 {{/if}}
 {{#unless useRouter}}
-import Home from '@views/Home'
+import Home from '@pages/Home'
 
 const App = () => {
   return (

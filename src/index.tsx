@@ -16,7 +16,7 @@ import {
 import App from './app'
 {{/if}}
 {{#unless useRouter}}
-import App from '@views/Home'
+import App from '@pages/Home'
 {{/unless}}
 
 {{#equal useStore 'mobx'}}
